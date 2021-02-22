@@ -1,0 +1,38 @@
+.container {
+  width: 800px;
+  display: flex;
+  flex-direction: column;
+  //align-items: center;
+  //justify-content: center;
+  margin: 0 auto;
+  padding-top: 50px;
+  padding-bottom: 50px;
+
+  header {
+    form {
+      margin-bottom: 20px;
+      padding: 10px;
+      border: grey solid 1px;
+
+      input {
+        width: 90%;
+      }
+
+      button {
+        width: 10%;
+      }
+    }
+  }
+
+  main {
+    margin-bottom: 20px;
+    padding: 10px;
+    border: grey solid 1px;
+  }
+
+  footer {
+    padding: 10px;
+    border: grey solid 1px;
+    text-align: center;
+  }
+}

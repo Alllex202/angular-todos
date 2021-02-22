@@ -1,0 +1,59 @@
+.todo__wrapper {
+  margin-bottom: 10px;
+
+  .todo__review {
+    display: flex;
+    align-items: center;
+    position: relative;
+
+    &:hover {
+      &:after {
+        content: '';
+        display: block;
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        border-bottom: 1px solid grey;
+        pointer-events: none;
+      }
+    }
+
+    input {
+
+    }
+
+    .todo__value {
+      margin: 0 auto 0 10px;
+
+      del {
+        opacity: .3;
+      }
+    }
+
+    .todo__btn-edit {
+      margin: 0 10px;
+    }
+
+    .todo__btn-delete {
+
+    }
+  }
+
+  .todo__edit {
+    display: flex;
+    align-items: center;
+
+    .todo__value {
+      width: 700px;
+      margin: 0 auto 0 0;
+    }
+
+    .todo__btn-save {
+      margin: 0 10px;
+    }
+
+    .todo__btn-cancel {
+
+    }
+  }
+}

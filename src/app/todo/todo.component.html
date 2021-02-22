@@ -1,0 +1,35 @@
+<div class="todo__wrapper">
+  <div class="todo__review" *ngIf="reviewMode">
+    <input type="checkbox" [checked]="isDone" (change)="onToggleTodo()">
+    <div class="todo__value">
+      <del *ngIf="isDone; else elseBlock">{{value}}</del>
+      <ng-template #elseBlock>{{value}}</ng-template>
+    </div>
+    <button
+      class="todo__btn-edit"
+      (click)="onClickOpenEditTodo()"
+    >edit</button>
+    <button
+      class="todo__btn-delete"
+      (click)="onClickRemoveTodo()"
+    >del</button>
+  </div>
+
+  <form class="todo__edit" *ngIf="!reviewMode">
+    <input
+      class="todo__value"
+      [(ngModel)]="newValue"
+      [ngModelOptions]="{standalone: true}"
+    >
+    <button
+      type="submit"
+      class="todo__btn-save"
+      (click)="onClickSaveTodo()"
+    >save</button>
+    <button
+      type="button"
+      class="todo__btn-cancel"
+      (click)="onClickCancelEditTodo()"
+    >cancel</button>
+  </form>
+</div>
